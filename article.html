@@ -1,0 +1,1753 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preload" href="./assets/fonts/NotoSerifKR-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/NotoSerifKR-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/NotoSerifKR-Black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/InterTight-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/InterTight-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/InterTight-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
+		<title>Article</title>
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1758105476382"></script>
+		<script type="module" crossorigin="" src="./js/slider.min.js?v=1758105476382"></script>
+		<script type="module" crossorigin="" src="./js/popup.min.js?v=1758105476382"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1758105476382">
+		<link rel="stylesheet" crossorigin="" href="./css/slider.min.css?v=1758105476382">
+		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1758105476382">
+		<link rel="stylesheet" crossorigin="" href="./css/article.min.css?v=1758105476382">
+		<link rel="stylesheet" crossorigin="" href="./css/article-block.min.css?v=1758105476382">
+		<link rel="stylesheet" crossorigin="" href="./css/blog.min.css?v=1758105476382">
+		<link rel="stylesheet" crossorigin="" href="./css/proposals.min.css?v=1758105476382">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+					<div class="header__top">
+						<div class="header__top-left">
+							<button type="button" class="header__burger" data-menu="burger" data-menu-click="">
+								<span class="header__burger-icon">
+									<span></span>
+								</span>
+								<span class="header__burger-text">Меню</span>
+							</button>
+						</div>
+						<a href="/" class="header__logo">
+							<img src="./assets/img/logo-text.svg" alt="logo Balleria">
+						</a>
+						<div class="header__top-right">
+							<div class="header__actions" data-fls-dynamic=".navmenu__content, 767.98">
+								<button type="button" class="header__action" data-menu="search" data-menu-click="">
+									<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M17.7222 16.3814L14.6465 13.3064C15.5786 12.0864 16.0899 10.6066 16.0901 9.04512C16.0901 7.16335 15.357 5.39408 14.0259 4.06349C12.695 2.7329 10.9256 2 9.04323 2C7.16107 2 5.39143 2.7329 4.06056 4.06349C1.31315 6.81056 1.31315 11.2801 4.06056 14.0267C5.39143 15.3576 7.16107 16.0905 9.04323 16.0905C10.6051 16.0903 12.0852 15.5791 13.3054 14.6472L16.3811 17.7222C16.5661 17.9074 16.809 18 17.0516 18C17.2943 18 17.5372 17.9074 17.7222 17.7222C18.0926 17.3521 18.0926 16.7516 17.7222 16.3814ZM5.40162 12.686C3.39374 10.6785 3.39397 7.41197 5.40162 5.40427C6.37431 4.43202 7.66767 3.89636 9.04323 3.89636C10.419 3.89636 11.7122 4.43202 12.6848 5.40427C13.6575 6.37675 14.1933 7.66984 14.1933 9.04512C14.1933 10.4206 13.6575 11.7135 12.6848 12.686C11.7122 13.6584 10.419 14.1941 9.04323 14.1941C7.66767 14.1941 6.37431 13.6584 5.40162 12.686Z" fill="currentColor"></path>
+									</svg>
+								</button>
+								<a href="#" class="header__action" data-fls-popup-link="popup">
+									<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M7.12411 1.60424C7.24688 1.72739 7.35396 1.86523 7.44304 2.01479L8.83525 4.3969C9.16981 4.96877 9.26833 5.65249 9.11045 6.30674C8.95256 6.96099 8.55034 7.53575 7.98693 7.91221L7.49566 8.24087C8.45555 10.0482 9.93181 11.5222 11.742 12.4806L12.0811 11.9829C12.4612 11.4245 13.0378 11.0274 13.6922 10.8734C14.3465 10.7194 15.0291 10.8201 15.5995 11.1549L17.9901 12.5596C18.3605 12.7788 18.6518 13.1078 18.8248 13.5023C18.9978 13.8967 19.0441 14.3377 18.9575 14.7655C18.7962 15.4709 18.4923 16.1393 18.0646 16.7291C17.6369 17.3189 17.0945 17.8176 16.471 18.1943C15.8963 18.564 15.2547 18.8139 14.5856 18.9285C13.9166 19.043 13.2345 19.0198 12.5815 18.8602C9.82347 18.125 7.32033 16.6849 5.31546 14.6799C3.31058 12.6749 1.87221 10.1733 1.1402 7.41836C0.979747 6.76208 0.956742 6.07663 1.07261 5.40442C1.18847 4.73221 1.44074 4.08756 1.81381 3.51036C2.18701 2.89355 2.68123 2.35674 3.26585 1.93316C3.85048 1.50957 4.51307 1.20823 5.21262 1.04778C5.55632 0.973783 5.911 0.985898 6.24468 1.08304C6.57837 1.18018 6.88059 1.35929 7.12411 1.60424ZM8.23205 11.7412C7.24132 10.7529 6.43835 9.59278 5.86045 8.31459C5.7881 8.1544 5.77612 7.97227 5.82667 7.80106C5.87722 7.62985 5.98697 7.48084 6.13612 7.38092L7.17945 6.68365C7.4222 6.52133 7.59553 6.27366 7.66366 5.99174C7.7318 5.70981 7.68955 5.41515 7.54563 5.16856L6.15619 2.78921C6.0931 2.67755 5.99585 2.58945 5.87829 2.53746C5.76072 2.48547 5.62882 2.47224 5.50136 2.49963C5.00051 2.61625 4.52657 2.83398 4.10901 3.13927C3.69146 3.44457 3.33923 3.83089 3.07425 4.27421C2.81067 4.67582 2.6309 5.12505 2.54597 5.59426C2.46105 6.06347 2.47278 6.54274 2.58044 7.00259C3.24663 9.51171 4.5562 11.7902 6.3818 13.6164C8.2074 15.4426 10.4869 16.7545 12.9986 17.4243C13.4547 17.5308 13.93 17.5423 14.3954 17.4583C14.8607 17.3743 15.3062 17.1965 15.7045 16.9358C16.1503 16.6669 16.5392 16.3119 16.8475 15.8922C17.1559 15.4726 17.3775 14.997 17.4989 14.4941C17.5241 14.3668 17.5095 14.2358 17.4571 14.1191C17.4047 14.0023 17.317 13.9054 17.2061 13.8417L14.8162 12.4391C14.5704 12.2948 14.2762 12.2514 13.9942 12.3178C13.7123 12.3842 13.4639 12.5555 13.3002 12.7963L12.592 13.8437C12.4913 13.9918 12.3419 14.1004 12.1706 14.1499C11.9993 14.1995 11.8174 14.1868 11.6576 14.114C10.3812 13.5316 9.22197 12.7286 8.23205 11.7412Z" fill="currentColor"></path>
+									</svg>
+								</a>
+								<a href="#" class="header__action">
+									<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M14.0179 2C15.4275 2 16.7185 2.58286 17.6448 3.63487C18.5244 4.63394 19 5.96075 19 7.36431C19 8.91532 18.3894 10.3346 17.1493 11.8109C16.053 13.1159 14.4846 14.4527 12.7137 15.963C12.05 16.5291 11.3658 17.1126 10.6378 17.75L10.637 17.7492L10.6161 17.7689C10.441 17.9223 10.2206 18 10 18C9.77946 18 9.55911 17.9224 9.38393 17.7689L9.36217 17.7492C8.63421 17.1117 7.94987 16.529 7.28627 15.963C5.51535 14.4526 3.94701 13.1158 2.85073 11.8109C1.61058 10.3346 1 8.91531 1 7.36431C1.00002 5.96074 1.4756 4.63391 2.35519 3.63487C3.28156 2.58287 4.57251 2 5.98214 2C7.98752 2 9.24489 3.20473 9.9255 4.16612C9.95119 4.20241 9.97544 4.23927 10 4.27549C10.0246 4.23927 10.0488 4.20241 10.0745 4.16612C10.7551 3.20473 12.0125 2 14.0179 2ZM14.0179 3.84704C12.8439 3.84704 12.0662 4.56638 11.5979 5.2278C11.1795 5.81879 10.9594 6.41967 10.8856 6.64638C10.7627 7.02354 10.408 7.28618 10 7.28618C9.59197 7.28618 9.23728 7.02354 9.1144 6.64638C9.0406 6.41972 8.82029 5.81945 8.40206 5.22862C7.93379 4.56718 7.15612 3.84704 5.98214 3.84704C5.11556 3.84704 4.32848 4.20174 3.75725 4.85033C3.1869 5.49807 2.86163 6.38781 2.86161 7.36431C2.86161 8.51701 3.37113 9.55967 4.34821 10.7048C5.33247 11.8583 6.74878 13.0681 8.5 14.5617C8.98437 14.9748 9.48086 15.4003 10 15.8495C10.5192 15.4002 11.0157 14.9747 11.5 14.5617C13.2513 13.0681 14.6675 11.8583 15.6518 10.7048C16.6289 9.55966 17.1384 8.51701 17.1384 7.36431C17.1384 6.38781 16.8131 5.49807 16.2427 4.85033C15.6716 4.20173 14.8844 3.84704 14.0179 3.84704Z" fill="currentColor"></path>
+									</svg>
+								</a>
+								<button type="button" class="header__action" data-menu="cart" data-menu-click="">
+									<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M6.66667 5.18182V3.45455C6.66667 1.54665 8.15905 0 10 0C11.841 0 13.3333 1.54665 13.3333 3.45455V5.18182H20V19H0V5.18182H6.66667ZM11.6667 3.45455V5.18182H8.33333V3.45455C8.33333 2.50061 9.07953 1.72727 10 1.72727C10.9205 1.72727 11.6667 2.50061 11.6667 3.45455ZM13.3333 10.3636V6.90909H18.3333V17.2727H1.66667V6.90909H6.66667V10.3636H8.33333V6.90909H11.6667V10.3636H13.3333Z" fill="currentColor"></path>
+									</svg>
+									<span class="header__action-count">5</span>
+								</button>
+							</div>
+							<div class="header__lang lang-block" data-fls-dynamic=".navmenu__head, 767.98">
+								<a href="#" class="lang-block__link is-active">RU</a>
+								<a href="#" class="lang-block__link">KZ</a>
+							</div>
+							<button type="button" class="header__cart" data-menu="cart" data-menu-click="">
+								<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M6.66667 5.18182V3.45455C6.66667 1.54666 8.15905 3.8147e-06 10 3.8147e-06C11.841 3.8147e-06 13.3333 1.54666 13.3333 3.45455V5.18182H20V19H0V5.18182H6.66667ZM11.6667 3.45455V5.18182H8.33333V3.45455C8.33333 2.50061 9.07953 1.72728 10 1.72728C10.9205 1.72728 11.6667 2.50061 11.6667 3.45455ZM13.3333 10.3636V6.90909H18.3333V17.2727H1.66667V6.90909H6.66667V10.3636H8.33333V6.90909H11.6667V10.3636H13.3333Z" fill="currentColor"></path>
+								</svg>
+								<span class="header__cart-count">5</span>
+							</button>
+						</div>
+					</div>
+					<div class="header__body">
+						<div class="header__menu menu">
+							<button type="button" class="menu__catalog" data-menu="catalog">
+								<svg width="15" height="9" viewbox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0.5 0H14.5V1H0.5V0Z" fill="currentColor"></path>
+									<path d="M0.5 4H14.5V5H0.5V4Z" fill="currentColor"></path>
+									<path d="M0.5 8H14.5V9H0.5V8Z" fill="currentColor"></path>
+								</svg>
+								<span>Каталог</span>
+							</button>
+							<nav class="menu__body dropdown-menu" data-menu-target="catalog">
+								<div class="menu__head">
+									<button type="button" class="menu__close" data-menu-close="">
+										<div class="menu__close-icon">
+											<svg width="10" height="10" viewbox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M5.59967 4.99971L9.5 8.90004L8.90004 9.5L5.00029 5.60025L1.10055 9.5L0.500586 8.90004L4.40033 5.00029L0.5 1.09996L1.10055 0.500586L4.99971 4.39975L8.89945 0.5L9.49941 1.09996L5.59967 4.99971Z" fill="currentColor"></path>
+											</svg>
+										</div>
+										<span>Закрыть каталог</span>
+									</button>
+								</div>
+								<ul class="menu__list">
+									<li class="menu__item">
+										<a href="#" class="menu__link">Новинки</a>
+									</li>
+									<li class="menu__item">
+										<a href="#" class="menu__link" data-menu="category-womans">Женское</a>
+									</li>
+									<li class="menu__item">
+										<a href="#" class="menu__link" data-menu="category-mans">Мужское</a>
+									</li>
+									<li class="menu__item">
+										<a href="#" class="menu__link" data-menu="category-kids">Детское</a>
+									</li>
+									<li class="menu__item">
+										<a href="#" class="menu__link">Акции</a>
+									</li>
+									<li class="menu__item">
+										<a href="#" class="menu__link">Хиты</a>
+									</li>
+									<li class="menu__item">
+										<a href="#" class="menu__link">Бренды</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="navmenu dropdown-menu" data-menu-target="burger">
+							<div class="navmenu__container">
+								<div class="navmenu__head">
+									<button type="button" class="navmenu__close" data-menu-close="">
+										<span class="navmenu__close-icon">
+											<svg width="10" height="10" viewbox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M5.59967 4.99971L9.5 8.90004L8.90004 9.5L5.00029 5.60025L1.10055 9.5L0.500586 8.90004L4.40033 5.00029L0.5 1.09996L1.10055 0.500586L4.99971 4.39975L8.89945 0.5L9.49941 1.09996L5.59967 4.99971Z" fill="currentColor"></path>
+											</svg>
+										</span>
+										<span class="navmenu__close-text">Закрыть меню</span>
+									</button>
+								</div>
+								<div class="navmenu__body">
+									<div class="navmenu__preview">
+										<video src="./assets/video/1.mp4" muted playsinline="" loop></video>
+										<div class="navmenu__logo">
+											<img src="./assets/img/logo-2.svg" alt="logo" loading="lazy">
+										</div>
+									</div>
+									<div class="navmenu__content">
+										<div class="navmenu__title">Меню</div>
+										<ul class="navmenu__list">
+											<li class="navmenu__item">
+												<a href="#" class="navmenu__link">Контакты</a>
+											</li>
+											<li class="navmenu__item">
+												<a href="#" class="navmenu__link">О компании</a>
+											</li>
+											<li class="navmenu__item">
+												<a href="#" class="navmenu__link">Блог</a>
+											</li>
+											<li class="navmenu__item">
+												<a href="#" class="navmenu__link">Оплата и доставка</a>
+											</li>
+											<li class="navmenu__item">
+												<a href="#" class="navmenu__link">Таблица размеров</a>
+											</li>
+										</ul>
+										<div class="navmenu__contacts">
+											<a href="tel:+11231231100" class="navmenu__contact">+1 123 123 11 00</a>
+											<a href="mailto:info@balleria.kz" class="navmenu__contact">info@balleria.kz</a>
+											<a href="#" class="navmenu__contact">
+												<svg width="16" height="17" viewbox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M8.00178 4.3978C5.73162 4.3978 3.9005 6.22933 3.9005 8.5C3.9005 10.7707 5.73162 12.6022 8.00178 12.6022C10.2719 12.6022 12.1031 10.7707 12.1031 8.5C12.1031 6.22933 10.2719 4.3978 8.00178 4.3978ZM8.00178 11.167C6.53475 11.167 5.33541 9.97094 5.33541 8.5C5.33541 7.02906 6.53118 5.83304 8.00178 5.83304C9.47239 5.83304 10.6682 7.02906 10.6682 8.5C10.6682 9.97094 9.46882 11.167 8.00178 11.167ZM13.2274 4.23C13.2274 4.76197 12.7991 5.18682 12.2708 5.18682C11.739 5.18682 11.3142 4.7584 11.3142 4.23C11.3142 3.70161 11.7426 3.27318 12.2708 3.27318C12.7991 3.27318 13.2274 3.70161 13.2274 4.23ZM15.9438 5.2011C15.8831 3.91939 15.5904 2.78406 14.6516 1.84866C13.7165 0.913254 12.5814 0.620495 11.2999 0.556231C9.97925 0.481256 6.02075 0.481256 4.70006 0.556231C3.4222 0.616925 2.28712 0.909684 1.34835 1.84509C0.409593 2.78049 0.120468 3.91582 0.0562186 5.19753C-0.0187395 6.51852 -0.0187395 10.4779 0.0562186 11.7989C0.116899 13.0806 0.409593 14.2159 1.34835 15.1513C2.28712 16.0867 3.41863 16.3795 4.70006 16.4438C6.02075 16.5187 9.97925 16.5187 11.2999 16.4438C12.5814 16.3831 13.7165 16.0903 14.6516 15.1513C15.5868 14.2159 15.8795 13.0806 15.9438 11.7989C16.0187 10.4779 16.0187 6.52209 15.9438 5.2011ZM14.2376 13.2163C13.9592 13.916 13.4202 14.4551 12.717 14.7372C11.664 15.1549 9.16542 15.0585 8.00178 15.0585C6.83815 15.0585 4.33597 15.1513 3.28656 14.7372C2.58695 14.4587 2.04796 13.9196 1.76598 13.2163C1.34835 12.1631 1.44473 9.6639 1.44473 8.5C1.44473 7.3361 1.35192 4.83337 1.76598 3.78372C2.04439 3.08396 2.58338 2.54485 3.28656 2.2628C4.33954 1.84509 6.83815 1.94148 8.00178 1.94148C9.16542 1.94148 11.6676 1.84866 12.717 2.2628C13.4166 2.54128 13.9556 3.08039 14.2376 3.78372C14.6552 4.83694 14.5588 7.3361 14.5588 8.5C14.5588 9.6639 14.6552 12.1666 14.2376 13.2163Z" fill="currentColor"></path>
+												</svg>
+												<span>balleria.kz</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="menu-catalog dropdown-menu" data-menu-target="category-womans">
+							<div class="menu-catalog__container">
+								<div class="menu-catalog__head">
+									<button type="button" class="menu-catalog__back" data-menu="catalog">
+										<svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M-7.15493e-08 6L6.27123 12L7.34551 10.8771L3.05975 6.77693L12 6.77693L12 5.22307L3.05975 5.22307L7.34551 1.12291L6.27123 -6.83149e-08L-7.15493e-08 6Z" fill="currentColor"></path>
+										</svg>
+										<span>Назад</span>
+									</button>
+									<button type="button" class="menu-catalog__close" data-menu-close="">
+										<svg width="10" height="10" viewbox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M5.59967 4.99971L9.5 8.90004L8.90004 9.5L5.00029 5.60025L1.10055 9.5L0.500586 8.90004L4.40033 5.00029L0.5 1.09996L1.10055 0.500586L4.99971 4.39975L8.89945 0.5L9.49941 1.09996L5.59967 4.99971Z" fill="currentColor"></path>
+										</svg>
+									</button>
+								</div>
+								<div class="menu-catalog__top">
+									<div class="menu-catalog__title title">Женское</div>
+									<a href="#" class="menu-catalog__all button">
+										<span>См. все</span>
+										<svg width="21" height="14" viewbox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M13.0001 0.999939L19.0001 7L13.0001 13.0001M18 6.99994H0" stroke="currentColor" stroke-width="2"></path>
+										</svg>
+									</a>
+								</div>
+								<div class="menu-catalog__budy">
+									<div class="menu-catalog__col">
+										<a href="#" class="menu-catalog__category title">
+											<span>Аксессуары</span>
+											<svg width="16" height="12" viewbox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10.2631 1L15 6L10.2631 11M14.2104 5.99995H0" stroke="currentColor"></path>
+											</svg>
+										</a>
+										<ul class="menu-catalog__list columns-2">
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Аксесуары для сумок</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Стиль жизни</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Брелок для ключей</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Хай-тек</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Головные уборы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Шарфы, палатки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Головные уборы, аксесуары для волос</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Ювелирные изделия</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Кошельки, визитницы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Галстуки, папийон</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Красота</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Носки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Перчатки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Пляж</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Ремни</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Солнечные очки</a>
+											</li>
+										</ul>
+									</div>
+									<div class="menu-catalog__col">
+										<a href="#" class="menu-catalog__category title">
+											<span>Обувь</span>
+											<svg width="16" height="12" viewbox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10.2631 1L15 6L10.2631 11M14.2104 5.99995H0" stroke="currentColor"></path>
+											</svg>
+										</a>
+										<ul class="menu-catalog__list">
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Кроссовки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Мокасины</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Обувь на плоской подошве</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Сандали</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Сапоги, ботильоны</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Танкетки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Туфли</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Туфли на высоком каблуке</a>
+											</li>
+										</ul>
+									</div>
+									<div class="menu-catalog__col">
+										<a href="#" class="menu-catalog__category title">
+											<span>Сумки</span>
+											<svg width="16" height="12" viewbox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10.2631 1L15 6L10.2631 11M14.2104 5.99995H0" stroke="currentColor"></path>
+											</svg>
+										</a>
+										<ul class="menu-catalog__list">
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Клатчи</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Наплечные сумки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Ручные сумки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Рюкзаки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Сумка</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Сумки через плечо</a>
+											</li>
+										</ul>
+									</div>
+									<div class="menu-catalog__col">
+										<a href="#" class="menu-catalog__category title">
+											<span>Одежда</span>
+											<svg width="16" height="12" viewbox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10.2631 1L15 6L10.2631 11M14.2104 5.99995H0" stroke="currentColor"></path>
+											</svg>
+										</a>
+										<ul class="menu-catalog__list columns-2">
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Пиджаки и костюмы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Пляжная одежда</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Джинсы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Повседневные куртки, парки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Жилет</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Поло</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Комбинезон</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Рубашки, блузы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Куртки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Свитер, кардиганы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Леггинсы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Свитшоты</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Мех</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Топы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Накидки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Футболки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Нижнее белье, тело</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Шорты, бермуды</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Пальто, тренчи</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Штаны, брюки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Платья</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Юбки</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="menu-catalog dropdown-menu" data-menu-target="category-mans">
+							<div class="menu-catalog__container">
+								<div class="menu-catalog__head">
+									<button type="button" class="menu-catalog__back" data-menu="catalog">
+										<svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M-7.15493e-08 6L6.27123 12L7.34551 10.8771L3.05975 6.77693L12 6.77693L12 5.22307L3.05975 5.22307L7.34551 1.12291L6.27123 -6.83149e-08L-7.15493e-08 6Z" fill="currentColor"></path>
+										</svg>
+										<span>Назад</span>
+									</button>
+									<button type="button" class="menu-catalog__close" data-menu-close="">
+										<svg width="10" height="10" viewbox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M5.59967 4.99971L9.5 8.90004L8.90004 9.5L5.00029 5.60025L1.10055 9.5L0.500586 8.90004L4.40033 5.00029L0.5 1.09996L1.10055 0.500586L4.99971 4.39975L8.89945 0.5L9.49941 1.09996L5.59967 4.99971Z" fill="currentColor"></path>
+										</svg>
+									</button>
+								</div>
+								<div class="menu-catalog__top">
+									<div class="menu-catalog__title title">Мужское</div>
+									<a href="#" class="menu-catalog__all button">
+										<span>См. все</span>
+										<svg width="21" height="14" viewbox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M13.0001 0.999939L19.0001 7L13.0001 13.0001M18 6.99994H0" stroke="currentColor" stroke-width="2"></path>
+										</svg>
+									</a>
+								</div>
+								<div class="menu-catalog__budy">
+									<div class="menu-catalog__col">
+										<a href="#" class="menu-catalog__category title">
+											<span>Аксессуары</span>
+											<svg width="16" height="12" viewbox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10.2631 1L15 6L10.2631 11M14.2104 5.99995H0" stroke="currentColor"></path>
+											</svg>
+										</a>
+										<ul class="menu-catalog__list columns-2">
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Аксесуары для сумок</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Стиль жизни</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Брелок для ключей</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Хай-тек</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Головные уборы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Шарфы, палатки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Головные уборы, аксесуары для волос</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Ювелирные изделия</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Кошельки, визитницы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Галстуки, папийон</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Красота</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Носки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Перчатки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Пляж</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Ремни</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Солнечные очки</a>
+											</li>
+										</ul>
+									</div>
+									<div class="menu-catalog__col">
+										<a href="#" class="menu-catalog__category title">
+											<span>Обувь</span>
+											<svg width="16" height="12" viewbox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10.2631 1L15 6L10.2631 11M14.2104 5.99995H0" stroke="currentColor"></path>
+											</svg>
+										</a>
+										<ul class="menu-catalog__list">
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Кроссовки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Мокасины</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Обувь на плоской подошве</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Сандали</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Сапоги, ботильоны</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Танкетки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Туфли</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Туфли на высоком каблуке</a>
+											</li>
+										</ul>
+									</div>
+									<div class="menu-catalog__col">
+										<a href="#" class="menu-catalog__category title">
+											<span>Сумки</span>
+											<svg width="16" height="12" viewbox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10.2631 1L15 6L10.2631 11M14.2104 5.99995H0" stroke="currentColor"></path>
+											</svg>
+										</a>
+										<ul class="menu-catalog__list">
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Клатчи</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Наплечные сумки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Ручные сумки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Рюкзаки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Сумка</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Сумки через плечо</a>
+											</li>
+										</ul>
+									</div>
+									<div class="menu-catalog__col">
+										<a href="#" class="menu-catalog__category title">
+											<span>Одежда</span>
+											<svg width="16" height="12" viewbox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10.2631 1L15 6L10.2631 11M14.2104 5.99995H0" stroke="currentColor"></path>
+											</svg>
+										</a>
+										<ul class="menu-catalog__list columns-2">
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Пиджаки и костюмы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Пляжная одежда</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Джинсы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Повседневные куртки, парки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Жилет</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Поло</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Комбинезон</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Рубашки, блузы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Куртки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Свитер, кардиганы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Леггинсы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Свитшоты</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Мех</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Топы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Накидки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Футболки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Нижнее белье, тело</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Шорты, бермуды</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Пальто, тренчи</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Штаны, брюки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Платья</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Юбки</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="menu-catalog dropdown-menu" data-menu-target="category-kids">
+							<div class="menu-catalog__container">
+								<div class="menu-catalog__head">
+									<button type="button" class="menu-catalog__back" data-menu="catalog">
+										<svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M-7.15493e-08 6L6.27123 12L7.34551 10.8771L3.05975 6.77693L12 6.77693L12 5.22307L3.05975 5.22307L7.34551 1.12291L6.27123 -6.83149e-08L-7.15493e-08 6Z" fill="currentColor"></path>
+										</svg>
+										<span>Назад</span>
+									</button>
+									<button type="button" class="menu-catalog__close" data-menu-close="">
+										<svg width="10" height="10" viewbox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M5.59967 4.99971L9.5 8.90004L8.90004 9.5L5.00029 5.60025L1.10055 9.5L0.500586 8.90004L4.40033 5.00029L0.5 1.09996L1.10055 0.500586L4.99971 4.39975L8.89945 0.5L9.49941 1.09996L5.59967 4.99971Z" fill="currentColor"></path>
+										</svg>
+									</button>
+								</div>
+								<div class="menu-catalog__top">
+									<div class="menu-catalog__title title">Детское</div>
+									<a href="#" class="menu-catalog__all button">
+										<span>См. все</span>
+										<svg width="21" height="14" viewbox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M13.0001 0.999939L19.0001 7L13.0001 13.0001M18 6.99994H0" stroke="currentColor" stroke-width="2"></path>
+										</svg>
+									</a>
+								</div>
+								<div class="menu-catalog__budy">
+									<div class="menu-catalog__col">
+										<a href="#" class="menu-catalog__category title">
+											<span>Аксессуары</span>
+											<svg width="16" height="12" viewbox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10.2631 1L15 6L10.2631 11M14.2104 5.99995H0" stroke="currentColor"></path>
+											</svg>
+										</a>
+										<ul class="menu-catalog__list columns-2">
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Аксесуары для сумок</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Стиль жизни</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Брелок для ключей</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Хай-тек</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Головные уборы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Шарфы, палатки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Головные уборы, аксесуары для волос</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Ювелирные изделия</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Кошельки, визитницы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Галстуки, папийон</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Красота</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Носки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Перчатки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Пляж</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Ремни</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Солнечные очки</a>
+											</li>
+										</ul>
+									</div>
+									<div class="menu-catalog__col">
+										<a href="#" class="menu-catalog__category title">
+											<span>Обувь</span>
+											<svg width="16" height="12" viewbox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10.2631 1L15 6L10.2631 11M14.2104 5.99995H0" stroke="currentColor"></path>
+											</svg>
+										</a>
+										<ul class="menu-catalog__list">
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Кроссовки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Мокасины</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Обувь на плоской подошве</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Сандали</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Сапоги, ботильоны</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Танкетки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Туфли</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Туфли на высоком каблуке</a>
+											</li>
+										</ul>
+									</div>
+									<div class="menu-catalog__col">
+										<a href="#" class="menu-catalog__category title">
+											<span>Сумки</span>
+											<svg width="16" height="12" viewbox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10.2631 1L15 6L10.2631 11M14.2104 5.99995H0" stroke="currentColor"></path>
+											</svg>
+										</a>
+										<ul class="menu-catalog__list">
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Клатчи</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Наплечные сумки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Ручные сумки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Рюкзаки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Сумка</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Сумки через плечо</a>
+											</li>
+										</ul>
+									</div>
+									<div class="menu-catalog__col">
+										<a href="#" class="menu-catalog__category title">
+											<span>Одежда</span>
+											<svg width="16" height="12" viewbox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10.2631 1L15 6L10.2631 11M14.2104 5.99995H0" stroke="currentColor"></path>
+											</svg>
+										</a>
+										<ul class="menu-catalog__list columns-2">
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Пиджаки и костюмы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Пляжная одежда</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Джинсы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Повседневные куртки, парки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Жилет</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Поло</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Комбинезон</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Рубашки, блузы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Куртки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Свитер, кардиганы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Леггинсы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Свитшоты</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Мех</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Топы</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Накидки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Футболки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Нижнее белье, тело</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Шорты, бермуды</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Пальто, тренчи</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Штаны, брюки</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Платья</a>
+											</li>
+											<li class="menu-catalog__item">
+												<a href="#" class="menu-catalog__link">Юбки</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="search-block dropdown-menu" data-menu-target="search">
+						<div class="search-block__container">
+							<form class="search-block__field">
+								<input autocomplete="off" type="text" name="search" placeholder="Введите название товара или бренд" class="search-block__input">
+								<button type="submit" class="search-block__button button-empty">
+									<span>Найти</span>
+									<svg width="21" height="14" viewbox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path opacity="0.5" d="M12.9999 0.999935L19 7L12.9999 13.0001M17.9999 6.99994H-0.00012207" stroke="currentColor" stroke-width="2"></path>
+									</svg>
+								</button>
+							</form>
+							<button type="button" class="search-block__close" data-menu-close="">
+								<svg width="14" height="14" viewbox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M13 1L1 13M1 1L13 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="cart-block dropdown-menu" data-menu-target="cart" data-scroll-block="">
+						<div class="cart-block__wrapper">
+							<div class="cart-block__body">
+								<div class="cart-block__head">
+									<div class="cart-block__title title title--h2">Корзина</div>
+									<button type="button" class="cart-block__close" data-menu-close="">
+										<svg width="14" height="14" viewbox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M13 1L1 13M1 1L13 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</button>
+								</div>
+								<div class="cart-block__products">
+									<div class="cart-product">
+										<a href="#" class="cart-product__img">
+											<img alt="Image" loading="lazy" src="./assets/img/products/image-1.webp">
+										</a>
+										<div class="cart-product__body">
+											<button type="button" class="cart-product__delete">
+												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+											</button>
+											<div class="cart-product__head">
+												<a href="#" class="cart-product__title">'Moschino Teddy Bear' sweatshirt</a>
+												<div class="cart-product__prices">
+													<div class="cart-product__oldprice">480$</div>
+													<div class="cart-product__price">380$</div>
+												</div>
+											</div>
+											<div class="cart-product__details">
+												<div class="cart-product__block">
+													<div class="cart-product__label">Цвет:</div>
+													<div class="cart-product__value">Серый</div>
+												</div>
+												<div class="cart-product__block">
+													<div class="cart-product__label">Размер:</div>
+													<div class="cart-product__size">S</div>
+												</div>
+											</div>
+											<div data-fls-quantity="" class="quantity">
+												<button data-fls-quantity-minus="" type="button" class="quantity__button">
+													<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg>
+												</button>
+												<div class="quantity__input">
+													<input data-fls-quantity-value="" autocomplete="off" type="text" name="quantity" value="1">
+												</div>
+												<button data-fls-quantity-plus="" type="button" class="quantity__button">
+													<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M5 12H19M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="cart-product">
+										<a href="#" class="cart-product__img">
+											<img alt="Image" loading="lazy" src="./assets/img/products/image-2.webp">
+										</a>
+										<div class="cart-product__body">
+											<button type="button" class="cart-product__delete">
+												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+											</button>
+											<div class="cart-product__head">
+												<a href="#" class="cart-product__title">'Fendi FFold' slides</a>
+												<div class="cart-product__prices">
+													<div class="cart-product__price">380$</div>
+												</div>
+											</div>
+											<div class="cart-product__details">
+												<div class="cart-product__block">
+													<div class="cart-product__label">Цвет:</div>
+													<div class="cart-product__value">Серый</div>
+												</div>
+												<div class="cart-product__block">
+													<div class="cart-product__label">Размер:</div>
+													<div class="cart-product__size">38</div>
+												</div>
+											</div>
+											<div data-fls-quantity="" class="quantity">
+												<button data-fls-quantity-minus="" type="button" class="quantity__button">
+													<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg>
+												</button>
+												<div class="quantity__input">
+													<input data-fls-quantity-value="" autocomplete="off" type="text" name="quantity" value="1">
+												</div>
+												<button data-fls-quantity-plus="" type="button" class="quantity__button">
+													<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M5 12H19M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="cart-product">
+										<a href="#" class="cart-product__img">
+											<img alt="Image" loading="lazy" src="./assets/img/products/image-3.webp">
+										</a>
+										<div class="cart-product__body">
+											<button type="button" class="cart-product__delete">
+												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+											</button>
+											<div class="cart-product__head">
+												<a href="#" class="cart-product__title">'Maiolica' print cotton shorts</a>
+												<div class="cart-product__prices">
+													<div class="cart-product__price">380$</div>
+												</div>
+											</div>
+											<div class="cart-product__details">
+												<div class="cart-product__block">
+													<div class="cart-product__label">Цвет:</div>
+													<div class="cart-product__value">Серый</div>
+												</div>
+												<div class="cart-product__block">
+													<div class="cart-product__label">Размер:</div>
+													<div class="cart-product__size">38</div>
+												</div>
+											</div>
+											<div data-fls-quantity="" class="quantity">
+												<button data-fls-quantity-minus="" type="button" class="quantity__button">
+													<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg>
+												</button>
+												<div class="quantity__input">
+													<input data-fls-quantity-value="" autocomplete="off" type="text" name="quantity" value="1">
+												</div>
+												<button data-fls-quantity-plus="" type="button" class="quantity__button">
+													<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M5 12H19M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="cart-product">
+										<a href="#" class="cart-product__img">
+											<img alt="Image" loading="lazy" src="./assets/img/products/image-4.webp">
+										</a>
+										<div class="cart-product__body">
+											<button type="button" class="cart-product__delete">
+												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+											</button>
+											<div class="cart-product__head">
+												<a href="#" class="cart-product__title">'Baguette' pouch</a>
+												<div class="cart-product__prices">
+													<div class="cart-product__price">380$</div>
+												</div>
+											</div>
+											<div class="cart-product__details">
+												<div class="cart-product__block">
+													<div class="cart-product__label">Цвет:</div>
+													<div class="cart-product__value">Серый</div>
+												</div>
+												<div class="cart-product__block">
+													<div class="cart-product__label">Размер:</div>
+													<div class="cart-product__size">38</div>
+												</div>
+											</div>
+											<div data-fls-quantity="" class="quantity">
+												<button data-fls-quantity-minus="" type="button" class="quantity__button">
+													<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg>
+												</button>
+												<div class="quantity__input">
+													<input data-fls-quantity-value="" autocomplete="off" type="text" name="quantity" value="1">
+												</div>
+												<button data-fls-quantity-plus="" type="button" class="quantity__button">
+													<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M5 12H19M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="cart-product">
+										<a href="#" class="cart-product__img">
+											<img alt="Image" loading="lazy" src="./assets/img/products/image-5.webp">
+										</a>
+										<div class="cart-product__body">
+											<button type="button" class="cart-product__delete">
+												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+											</button>
+											<div class="cart-product__head">
+												<a href="#" class="cart-product__title">Deliliah Wool-Blend Wide-Leg Pants</a>
+												<div class="cart-product__prices">
+													<div class="cart-product__price">380$</div>
+												</div>
+											</div>
+											<div class="cart-product__details">
+												<div class="cart-product__block">
+													<div class="cart-product__label">Цвет:</div>
+													<div class="cart-product__value">Серый</div>
+												</div>
+												<div class="cart-product__block">
+													<div class="cart-product__label">Размер:</div>
+													<div class="cart-product__size">38</div>
+												</div>
+											</div>
+											<div data-fls-quantity="" class="quantity">
+												<button data-fls-quantity-minus="" type="button" class="quantity__button">
+													<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg>
+												</button>
+												<div class="quantity__input">
+													<input data-fls-quantity-value="" autocomplete="off" type="text" name="quantity" value="1">
+												</div>
+												<button data-fls-quantity-plus="" type="button" class="quantity__button">
+													<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M5 12H19M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="cart-block__bottom">
+									<a href="#" class="cart-block__order button-dark">
+										<span>Оформить заказ</span>
+										<svg width="21" height="14" viewbox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M13.5001 1L19.5001 7.00006L13.5001 13.0001M18.5 7H0.5" stroke="currentColor" stroke-width="2"></path>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="page">
+				<div class="breadcrumbs">
+					<div class="breadcrumbs__container">
+						<a href="#" class="breadcrumbs__link">
+							<svg width="16" height="14" viewbox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M7.73934 0.623559C7.92402 0.457789 8.20869 0.458863 8.39179 0.626523L15.3481 6.9859C15.5416 7.16277 15.5515 7.45935 15.3706 7.64842C15.1896 7.83735 14.8864 7.84747 14.6926 7.67045L13.8209 6.87355V13.0313C13.8209 13.2901 13.6061 13.5 13.3412 13.5H9.74308C9.47812 13.5 9.26335 13.2902 9.26334 13.0313V10.0781H6.84861V13.0312C6.84861 13.2901 6.63386 13.5 6.36888 13.5H2.78679C2.52184 13.5 2.30706 13.2901 2.30706 13.0312V6.77316L1.30438 7.67325C1.21228 7.75591 1.09584 7.79686 0.979915 7.79686C0.850217 7.79686 0.721004 7.74594 0.626493 7.64515C0.447227 7.45453 0.460045 7.15812 0.655132 6.98296L7.73934 0.623559ZM3.26653 5.91185V12.5625H5.88911V9.60936C5.88911 9.35047 6.10387 9.14062 6.36885 9.14061H9.74308C10.008 9.14062 10.2228 9.35044 10.2228 9.60936V12.5625H12.8614V5.99639L8.06109 1.60793L3.26653 5.91185Z" fill="currentColor"></path>
+							</svg>
+						</a>
+						<a href="#" class="breadcrumbs__link">Блог</a>
+						<span class="breadcrumbs__link is-active">Обзор новинок женских сумок бренда Pinko</span>
+					</div>
+				</div>
+				<section class="article-block">
+					<div class="article-block__container">
+						<div class="article-block__promo">
+							<h1>Обзор новинок женских сумок бренда Pinko</h1>
+							<img alt="Image" loading="lazy" src="./assets/img/blog/image-13.webp">
+							<p>
+								В мире моды всегда есть место для новых тенденций и стильных аксессуаров. И одним из самых популярных
+                брендов среди модниц является Pinko. Эта итальянская марка известна своими неповторимыми коллекциями
+                сумок, сочетающих элегантный дизайн и высокое качество. Недавно на сайте Balleria появились новые модели
+                сумок Pinko, ставшие настоящими хитами продаж. В этом обзоре мы рассмотрим несколько интересных новинок
+                этого бренда.
+                Для современных женщин сумка выступает не только как практичный аксессуар для переноски личных вещей, но
+                и как немаловажная часть их стиля и образа. Качественная сумка может дополнить любой вид и подчеркнуть
+                индивидуальность владелицы. Однако, среди большого количества брендов и моделей важно знать, какую
+                сумку выбрать.
+                В этом обзоре мы рассмотрим новинки женских сумок бренда Pinko, доступные на сайте Balleria. Pinko
+                известен своими эксклюзивными итальянскими коллекциями модных аксессуаров, сочетающих в себе
+                классический стиль с современными трендами. Благодаря этому, вы найдете сумку, соответствующую вашему
+                вкусу и потребностям.
+							</p>
+							<h5>Pinko: Итальянский бренд модных аксессуаров</h5>
+							<p>
+								Pinko — это известный итальянский бренд, который был основан в 1980 году. Он быстро стал известен
+                благодаря своим модным коллекциям одежды и аксессуаров, в частности, женскими сумками. Pinko
+                определяется своим уникальным стилем, сочетающим классику с новаторскими элементами.
+                Бренд Pinko известен своими высококачественными материалами и тщательной работой мастеров, создающих
+                каждую сумку. Каждый дизайн Pinko тщательно продуман, чтобы удовлетворить потребности современных
+                женщин. Благодаря сочетанию изящества, стиля и практичности, Pinko стал излюбленным брендом многих
+                модниц по всему миру.
+							</p>
+							<h5>Сумка Pinko Love Bell Classic Simply кросс-боди</h5>
+							<p>
+								Сумка Pinko Love Bell Classik Simply – это элегантная женская сумка из натуральной кожи. Ее бежевый цвет
+                придает ей нежность и создает стильный образ. Эта модель имеет удобное ремешок для ношения через плечо,
+                что позволяет держать сумку свободными руками. Кроме того, она оснащена несколькими отделениями и
+                карманами, что позволяет организовать пространство внутри сумки и хранить вещи в порядке.
+							</p>
+						</div>
+						<div class="article-block__images">
+							<img alt="Image" loading="lazy" src="./assets/img/blog/image-14.webp">
+							<img alt="Image" loading="lazy" src="./assets/img/blog/image-15.webp">
+							<img alt="Image" loading="lazy" src="./assets/img/blog/image-16.webp">
+						</div>
+						<h5>Сумка Pinko Mini Love Bag One Simply</h5>
+						<p>
+							Если вы ищете компактную сумку, которая отлично впишется в любое изображение, обратите внимание на сумку
+            Pinko Mini Love Bag One Simply. Ее синий цвет привлекает внимание и придает свежести вашему стилю. Несмотря
+            на компактные размеры, сумка имеет достаточно места для необходимых вещей. Она имеет одно большое отделение
+            и небольшой карман внутри, а также ремешок на плечо.
+						</p>
+						<div class="article-block__images">
+							<img alt="Image" loading="lazy" src="./assets/img/blog/image-17.webp">
+							<img alt="Image" loading="lazy" src="./assets/img/blog/image-18.webp">
+							<img alt="Image" loading="lazy" src="./assets/img/blog/image-19.webp">
+						</div>
+						<h5>Сумка Pinko Love One Classic Suede кросс-боди</h5>
+						<p>
+							Сумка Pinko Love One Classic Suede – это вариант для тех, кто ценит комфорт и стиль одновременно.
+            Изготовлена ​​из замшевой кожи, мягкая на ощупь и имеет приятный серый цвет. Эта модель оснащена длинным
+            ремешком, позволяющим носить ее на плече или через тело. Благодаря своему дизайну и функциональности, сумка
+            Pinko Love One Classic Suede станет отличным дополнением к любому образу.
+						</p>
+						<div class="article-block__images">
+							<img alt="Image" loading="lazy" src="./assets/img/blog/image-20.webp">
+							<img alt="Image" loading="lazy" src="./assets/img/blog/image-21.webp">
+							<img alt="Image" loading="lazy" src="./assets/img/blog/image-22.webp">
+						</div>
+						<p>
+							Сумки Pinko – это воплощение стиля, элегантности и качества. Новые модели на сайте Miraton не оставят
+            безразличными поклонников этого бренда. Вы найдете сумку, которая идеально подойдет вашему стилю и станет
+            уникальным аксессуаром. Выберите свою любимую модель и носите ее с гордостью!
+						</p>
+					</div>
+				</section>
+				<section class="interesting">
+					<div class="interesting__container">
+						<div class="interesting__head">
+							<h2 class="interesting__title title title--h2">Будет интересно</h2>
+							<div class="interesting__nav slider-navigation">
+								<button type="button" class="swiper-button-prev">
+									<svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M-7.15493e-08 6L6.27123 12L7.34551 10.8771L3.05975 6.77693L12 6.77693L12 5.22307L3.05975 5.22307L7.34551 1.12291L6.27123 -6.83149e-08L-7.15493e-08 6Z" fill="currentColor"></path>
+									</svg>
+								</button>
+								<div class="swiper-pagination"></div>
+								<button type="button" class="swiper-button-next">
+									<svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12 6L5.72877 12L4.65449 10.8771L8.94025 6.77693L6.73273e-07 6.77693L5.37428e-07 5.22307L8.94025 5.22306L4.65449 1.12291L5.72877 -5.6914e-07L12 6Z" fill="currentColor"></path>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div data-fls-slider="" class="interesting__slider swiper">
+							<div class="interesting__wrapper swiper-wrapper">
+								<article class="article-card swiper-slide">
+									<div class="article-card__img">
+										<img alt="Image" loading="lazy" src="./assets/img/blog/image-1.webp">
+									</div>
+									<a href="#" class="article-card__title">Бренд DAVID KOMA на сайте Balleria женская одежда</a>
+									<a href="#" class="article-card__btn button-empty">
+										<span>Читать подробнее</span>
+										<svg width="18" height="13" viewbox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M10.9473 1.44733L16 6.49998L10.9473 11.5526M15.1578 6.49993H0" stroke="currentColor" stroke-width="2"></path>
+										</svg>
+									</a>
+								</article>
+								<article class="article-card swiper-slide">
+									<div class="article-card__img">
+										<img alt="Image" loading="lazy" src="./assets/img/blog/image-2.webp">
+									</div>
+									<a href="#" class="article-card__title">Обзор новинок женских сумок бренда Pinko</a>
+									<a href="#" class="article-card__btn button-empty">
+										<span>Читать подробнее</span>
+										<svg width="18" height="13" viewbox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M10.9473 1.44733L16 6.49998L10.9473 11.5526M15.1578 6.49993H0" stroke="currentColor" stroke-width="2"></path>
+										</svg>
+									</a>
+								</article>
+								<article class="article-card swiper-slide">
+									<div class="article-card__img">
+										<img alt="Image" loading="lazy" src="./assets/img/blog/image-3.webp">
+									</div>
+									<a href="#" class="article-card__title">Как отличить оригинальные бренды от подделок: чек-лист для покупателя</a>
+									<a href="#" class="article-card__btn button-empty">
+										<span>Читать подробнее</span>
+										<svg width="18" height="13" viewbox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M10.9473 1.44733L16 6.49998L10.9473 11.5526M15.1578 6.49993H0" stroke="currentColor" stroke-width="2"></path>
+										</svg>
+									</a>
+								</article>
+								<article class="article-card swiper-slide">
+									<div class="article-card__img">
+										<img alt="Image" loading="lazy" src="./assets/img/blog/image-4.webp">
+									</div>
+									<a href="#" class="article-card__title">10 must-have вещей этого сезона: от сумок до обуви</a>
+									<a href="#" class="article-card__btn button-empty">
+										<span>Читать подробнее</span>
+										<svg width="18" height="13" viewbox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M10.9473 1.44733L16 6.49998L10.9473 11.5526M15.1578 6.49993H0" stroke="currentColor" stroke-width="2"></path>
+										</svg>
+									</a>
+								</article>
+								<article class="article-card swiper-slide">
+									<div class="article-card__img">
+										<img alt="Image" loading="lazy" src="./assets/img/blog/image-5.webp">
+									</div>
+									<a href="#" class="article-card__title">История бренда Gucci: от маленькой мастерской до модного гиганта</a>
+									<a href="#" class="article-card__btn button-empty">
+										<span>Читать подробнее</span>
+										<svg width="18" height="13" viewbox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M10.9473 1.44733L16 6.49998L10.9473 11.5526M15.1578 6.49993H0" stroke="currentColor" stroke-width="2"></path>
+										</svg>
+									</a>
+								</article>
+								<article class="article-card swiper-slide">
+									<div class="article-card__img">
+										<img alt="Image" loading="lazy" src="./assets/img/blog/image-6.webp">
+									</div>
+									<a href="#" class="article-card__title">Почему стоит инвестировать в люксовую сумку: мода и практичность</a>
+									<a href="#" class="article-card__btn button-empty">
+										<span>Читать подробнее</span>
+										<svg width="18" height="13" viewbox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M10.9473 1.44733L16 6.49998L10.9473 11.5526M15.1578 6.49993H0" stroke="currentColor" stroke-width="2"></path>
+										</svg>
+									</a>
+								</article>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="proposals">
+					<div class="proposals__container">
+						<div class="proposals__head">
+							<h2 class="proposals__title title title--h2">Рекомендуем товары</h2>
+							<div class="proposals__nav slider-navigation">
+								<button type="button" class="swiper-button-prev">
+									<svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M-7.15493e-08 6L6.27123 12L7.34551 10.8771L3.05975 6.77693L12 6.77693L12 5.22307L3.05975 5.22307L7.34551 1.12291L6.27123 -6.83149e-08L-7.15493e-08 6Z" fill="currentColor"></path>
+									</svg>
+								</button>
+								<div class="swiper-pagination"></div>
+								<button type="button" class="swiper-button-next">
+									<svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12 6L5.72877 12L4.65449 10.8771L8.94025 6.77693L6.73273e-07 6.77693L5.37428e-07 5.22307L8.94025 5.22306L4.65449 1.12291L5.72877 -5.6914e-07L12 6Z" fill="currentColor"></path>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div data-fls-slider="" class="proposals__slider swiper">
+							<div class="proposals__wrapper swiper-wrapper">
+								<article class="product-card swiper-slide">
+									<div class="product-card__badges">
+										<div class="product-card__badge">-33%</div>
+										<div class="product-card__badge">Новинка</div>
+									</div>
+									<a href="#" class="product-card__img">
+										<img alt="Image" loading="lazy" src="./assets/img/products/image-1.webp">
+									</a>
+									<a href="#" class="product-card__brand">
+										<span>Moschino</span>
+										<svg width="14" height="9" viewbox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M8.89472 0.5L13 4.5L8.89472 8.5M12.3157 4.49996H0" stroke="currentColor"></path>
+										</svg>
+									</a>
+									<div class="product-card__body">
+										<a href="#" class="product-card__title">'Moschino Teddy Bear' sweatshirt</a>
+										<div class="product-card__prices">
+											<div class="product-card__oldprice">513$</div>
+											<div class="product-card__price">380$</div>
+										</div>
+									</div>
+								</article>
+								<article class="product-card swiper-slide">
+									<div class="product-card__badges">
+										<div class="product-card__badge">Новинка</div>
+									</div>
+									<a href="#" class="product-card__img">
+										<img alt="Image" loading="lazy" src="./assets/img/products/image-6.webp">
+									</a>
+									<a href="#" class="product-card__brand">
+										<span>Fendi</span>
+										<svg width="14" height="9" viewbox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M8.89472 0.5L13 4.5L8.89472 8.5M12.3157 4.49996H0" stroke="currentColor"></path>
+										</svg>
+									</a>
+									<div class="product-card__body">
+										<a href="#" class="product-card__title">Patchwork silk shirt</a>
+										<div class="product-card__prices">
+											<div class="product-card__price">1.148$</div>
+										</div>
+									</div>
+								</article>
+								<article class="product-card swiper-slide">
+									<div class="product-card__badges">
+										<div class="product-card__badge">Новинка</div>
+									</div>
+									<a href="#" class="product-card__img">
+										<img alt="Image" loading="lazy" src="./assets/img/products/image-7.webp">
+									</a>
+									<a href="#" class="product-card__brand">
+										<span>Giovanni bedin</span>
+										<svg width="14" height="9" viewbox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M8.89472 0.5L13 4.5L8.89472 8.5M12.3157 4.49996H0" stroke="currentColor"></path>
+										</svg>
+									</a>
+									<div class="product-card__body">
+										<a href="#" class="product-card__title">Cropped shirt</a>
+										<div class="product-card__prices">
+											<div class="product-card__price">549$</div>
+										</div>
+									</div>
+								</article>
+								<article class="product-card swiper-slide">
+									<div class="product-card__badges"></div>
+									<a href="#" class="product-card__img">
+										<img alt="Image" loading="lazy" src="./assets/img/products/image-4.webp">
+									</a>
+									<a href="#" class="product-card__brand">
+										<span>Fendi</span>
+										<svg width="14" height="9" viewbox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M8.89472 0.5L13 4.5L8.89472 8.5M12.3157 4.49996H0" stroke="currentColor"></path>
+										</svg>
+									</a>
+									<div class="product-card__body">
+										<a href="#" class="product-card__title">'Baguette' pouch</a>
+										<div class="product-card__prices">
+											<div class="product-card__price">984$</div>
+										</div>
+									</div>
+								</article>
+								<article class="product-card swiper-slide">
+									<div class="product-card__badges">
+										<div class="product-card__badge">Новинка</div>
+									</div>
+									<a href="#" class="product-card__img">
+										<img alt="Image" loading="lazy" src="./assets/img/products/image-8.webp">
+									</a>
+									<a href="#" class="product-card__brand">
+										<span>Fendi</span>
+										<svg width="14" height="9" viewbox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M8.89472 0.5L13 4.5L8.89472 8.5M12.3157 4.49996H0" stroke="currentColor"></path>
+										</svg>
+									</a>
+									<div class="product-card__body">
+										<a href="#" class="product-card__title">'Fendi FFold' sandals</a>
+										<div class="product-card__prices">
+											<div class="product-card__price">697$</div>
+										</div>
+									</div>
+								</article>
+								<article class="product-card swiper-slide">
+									<div class="product-card__badges">
+										<div class="product-card__badge">Новинка</div>
+									</div>
+									<a href="#" class="product-card__img">
+										<img alt="Image" loading="lazy" src="./assets/img/products/image-9.webp">
+									</a>
+									<a href="#" class="product-card__brand">
+										<span>Balenciaga</span>
+										<svg width="14" height="9" viewbox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M8.89472 0.5L13 4.5L8.89472 8.5M12.3157 4.49996H0" stroke="currentColor"></path>
+										</svg>
+									</a>
+									<div class="product-card__body">
+										<a href="#" class="product-card__title">'Stud Nano XS' earrings</a>
+										<div class="product-card__prices">
+											<div class="product-card__price">266$</div>
+										</div>
+									</div>
+								</article>
+								<article class="product-card swiper-slide">
+									<div class="product-card__badges">
+										<div class="product-card__badge">Новинка</div>
+									</div>
+									<a href="#" class="product-card__img">
+										<img alt="Image" loading="lazy" src="./assets/img/products/image-10.webp">
+									</a>
+									<a href="#" class="product-card__brand">
+										<span>Brunello cucinelli</span>
+										<svg width="14" height="9" viewbox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M8.89472 0.5L13 4.5L8.89472 8.5M12.3157 4.49996H0" stroke="currentColor"></path>
+										</svg>
+									</a>
+									<div class="product-card__body">
+										<a href="#" class="product-card__title">Monile down jacket</a>
+										<div class="product-card__prices">
+											<div class="product-card__price">1.803$</div>
+										</div>
+									</div>
+								</article>
+								<article class="product-card swiper-slide">
+									<div class="product-card__badges">
+										<div class="product-card__badge">Новинка</div>
+									</div>
+									<a href="#" class="product-card__img">
+										<img alt="Image" loading="lazy" src="./assets/img/products/image-11.webp">
+									</a>
+									<a href="#" class="product-card__brand">
+										<span>Balenciaga</span>
+										<svg width="14" height="9" viewbox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M8.89472 0.5L13 4.5L8.89472 8.5M12.3157 4.49996H0" stroke="currentColor"></path>
+										</svg>
+									</a>
+									<div class="product-card__body">
+										<a href="#" class="product-card__title">'Lace Up' shirt</a>
+										<div class="product-card__prices">
+											<div class="product-card__price">1.475$</div>
+										</div>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="letstalk">
+					<div class="letstalk__container">
+						<div class="letstalk__preview" data-video-autoplay="">
+							<video src="./assets/video/1.mp4" muted playsinline="" loop></video>
+							<div class="letstalk__logo">
+								<img src="./assets/img/logo-3.svg" alt="logo" loading="lazy">
+							</div>
+						</div>
+						<div class="letstalk__body">
+							<h2 class="letstalk__title title title--h2">Возникли вопросы?</h2>
+							<div class="letstalk__content">
+								<div class="letstalk__head">
+									<div class="letstalk__text">Давайте обсудим! Оставьте заявку, наш менеджер свяжется с вами как можно скорее</div>
+									<div class="letstalk__time">ПН - ПТ с 09:00 по 18:00</div>
+								</div>
+								<form action="#" class="letstalk__form">
+									<div class="input-field">
+										<label class="input-field__label">Ваше имя*</label>
+										<input autocomplete="off" type="text" name="name" class="input-field__input">
+									</div>
+									<div class="input-field">
+										<label class="input-field__label">Телефон*</label>
+										<input autocomplete="off" type="text" name="tel" class="input-field__input is-error">
+										<div class="input-field__error">Ошибка, проверьте данные!</div>
+									</div>
+									<button type="submit" class="letstalk__btn button-empty">
+										<span>Отправить</span>
+										<svg width="21" height="14" viewbox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path opacity="0.5" d="M12.9999 1L19 7.00006L12.9999 13.0001M17.9999 7H-0.00012207" stroke="currentColor" stroke-width="2"></path>
+										</svg>
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="footer__container">
+					<div class="footer__body">
+						<div class="footer__logo">
+							<img src="./assets/img/logo-gray.svg" alt="Image" loading="lazy">
+						</div>
+						<nav class="footer__menu">
+							<div class="footer__col">
+								<div class="footer__title title">Каталог</div>
+								<ul class="footer__list columns-2">
+									<li class="footer__item">
+										<a href="#" class="footer__link">Женщина</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Мальчик</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Девочка</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Мужчина</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Малыш</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Унисекс малыш</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Унисекс ребенок</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Bestsellers</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__col">
+								<div class="footer__title title">Компания</div>
+								<ul class="footer__list columns-2">
+									<li class="footer__item">
+										<a href="#" class="footer__link">Дети</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Таблица размеров</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">О нас</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Оплата и доставка</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Политика возврата</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Условия соглашения</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Партнерство</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Блог</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__col">
+								<a href="#" class="footer__title title">
+									<span>Контакты</span>
+									<svg width="17" height="11" viewbox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.9473 0.5L16 5.5L10.9473 10.5M15.1578 5.49995H0" stroke="currentColor"></path>
+									</svg>
+								</a>
+								<ul class="footer__list">
+									<li class="footer__item">
+										<a href="tel:+11231231100" class="footer__link">+1 123 123 11 00</a>
+									</li>
+									<li class="footer__item">
+										<a href="mailto:info@balleria.kz" class="footer__link">info@balleria.kz</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">
+											<svg width="16" height="17" viewbox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.00179 4.3978C5.73162 4.3978 3.9005 6.22933 3.9005 8.5C3.9005 10.7707 5.73162 12.6022 8.00179 12.6022C10.2719 12.6022 12.1031 10.7707 12.1031 8.5C12.1031 6.22933 10.2719 4.3978 8.00179 4.3978ZM8.00179 11.167C6.53475 11.167 5.33542 9.97094 5.33542 8.5C5.33542 7.02906 6.53118 5.83304 8.00179 5.83304C9.47239 5.83304 10.6682 7.02906 10.6682 8.5C10.6682 9.97094 9.46882 11.167 8.00179 11.167ZM13.2274 4.23C13.2274 4.76197 12.7991 5.18682 12.2708 5.18682C11.739 5.18682 11.3142 4.7584 11.3142 4.23C11.3142 3.70161 11.7426 3.27318 12.2708 3.27318C12.7991 3.27318 13.2274 3.70161 13.2274 4.23ZM15.9438 5.2011C15.8831 3.91939 15.5904 2.78406 14.6516 1.84866C13.7165 0.913254 12.5814 0.620495 11.2999 0.556231C9.97925 0.481256 6.02075 0.481256 4.70006 0.556231C3.4222 0.616925 2.28712 0.909684 1.34835 1.84509C0.409593 2.78049 0.120468 3.91582 0.0562186 5.19753C-0.0187395 6.51852 -0.0187395 10.4779 0.0562186 11.7989C0.116899 13.0806 0.409593 14.2159 1.34835 15.1513C2.28712 16.0867 3.41863 16.3795 4.70006 16.4438C6.02075 16.5187 9.97925 16.5187 11.2999 16.4438C12.5814 16.3831 13.7165 16.0903 14.6516 15.1513C15.5868 14.2159 15.8795 13.0806 15.9438 11.7989C16.0187 10.4779 16.0187 6.52209 15.9438 5.2011ZM14.2376 13.2163C13.9592 13.916 13.4202 14.4551 12.717 14.7372C11.664 15.1549 9.16542 15.0585 8.00179 15.0585C6.83815 15.0585 4.33597 15.1513 3.28656 14.7372C2.58695 14.4587 2.04796 13.9196 1.76598 13.2163C1.34835 12.1631 1.44473 9.6639 1.44473 8.5C1.44473 7.3361 1.35192 4.83337 1.76598 3.78372C2.04439 3.08396 2.58338 2.54485 3.28656 2.2628C4.33954 1.84509 6.83815 1.94148 8.00179 1.94148C9.16542 1.94148 11.6676 1.84866 12.717 2.2628C13.4166 2.54128 13.9556 3.08039 14.2376 3.78372C14.6552 4.83694 14.5588 7.3361 14.5588 8.5C14.5588 9.6639 14.6552 12.1666 14.2376 13.2163Z" fill="currentColor"></path>
+											</svg>
+											<span>balleria.kz</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+					<div class="footer__copy">© Все права защищены “Balleria” 2025</div>
+				</div>
+			</footer>
+		</div>
+		<div data-fls-popup="popup" aria-hidden="true" class="popup">
+			<div data-fls-popup-wrapper="" class="popup__wrapper">
+				<div data-fls-popup-body="" class="popup__body">
+					<button data-fls-popup-close="" type="button" class="popup__close">
+						<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+						</svg>
+					</button>
+					<div data-fls-popup-content="" class="popup__content">
+						<div class="popup__head">
+							<div class="popup__title title title--h2">Возникли вопросы?</div>
+							<div class="popup__text">
+								Давайте обсудим! Оставьте заявку, наш менеджер свяжется
+								<br>
+								с вами как можно скорее
+							</div>
+						</div>
+						<form action="#" class="popup__form">
+							<div class="input-field">
+								<label class="input-field__label">Ваше имя*</label>
+								<input autocomplete="off" type="text" name="name" class="input-field__input">
+							</div>
+							<div class="input-field">
+								<label class="input-field__label">Телефон*</label>
+								<input autocomplete="off" type="text" name="tel" class="input-field__input">
+							</div>
+							<button type="submit" class="popup__btn button-empty">
+								<span>Отправить</span>
+								<svg width="21" height="14" viewbox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path opacity="0.5" d="M12.9999 1L19 7.00006L12.9999 13.0001M17.9999 7H-0.00012207" stroke="currentColor" stroke-width="2"></path>
+								</svg>
+							</button>
+						</form>
+						<button type="button" class="button-empty" data-fls-popup-link="popup-success">Popup-success</button>
+						<button type="button" class="button-empty" data-fls-popup-link="popup-error">Popup-error</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-fls-popup="popup-success" aria-hidden="true" class="popup">
+			<div data-fls-popup-wrapper="" class="popup__wrapper">
+				<div data-fls-popup-body="" class="popup__body">
+					<button data-fls-popup-close="" type="button" class="popup__close">
+						<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+						</svg>
+					</button>
+					<div data-fls-popup-content="" class="popup__content">
+						<div class="popup__head">
+							<div class="popup__icon">
+								<img src="./assets/img/icons/tick_icon.svg" alt="Image" loading="lazy">
+							</div>
+							<div class="popup__title title title--h2">Спасибо за заказ #126363!</div>
+							<div class="popup__text">
+								Ваш заказ успешно оформлен. Мы уже приступили к его обработке. В течение короткого времени вы
+						получите подтверждение по Email и/или SMS с номером заказа.
+							</div>
+							<div class="popup__text">Balleria.kz – с заботой о вашем стиле</div>
+							<a href="/" class="popup__btn button-dark">
+								<span>Вернуться на главную</span>
+								<svg width="21" height="14" viewbox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path opacity="0.5" d="M13.5001 1L19.5001 7.00006L13.5001 13.0001M18.5 7H0.5" stroke="currentColor" stroke-width="2"></path>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-fls-popup="popup-error" aria-hidden="true" class="popup">
+			<div data-fls-popup-wrapper="" class="popup__wrapper">
+				<div data-fls-popup-body="" class="popup__body">
+					<button data-fls-popup-close="" type="button" class="popup__close">
+						<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+						</svg>
+					</button>
+					<div data-fls-popup-content="" class="popup__content">
+						<div class="popup__head">
+							<div class="popup__icon">
+								<img src="./assets/img/icons/cross_icon.svg" alt="Image" loading="lazy">
+							</div>
+							<div class="popup__title title title--h2">Упс... Что-то пошло не так</div>
+							<div class="popup__text">
+								Кажется, произошла ошибка. Но это не повод расстраиваться. Попробуйте обновить страницу —
+						возможно, это временно. Если проблема остается — напишите нам, и мы обязательно всё исправим.
+							</div>
+							<a href="/" class="popup__btn button-dark">
+								<span>Вернуться на главную</span>
+								<svg width="21" height="14" viewbox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path opacity="0.5" d="M13.5001 1L19.5001 7.00006L13.5001 13.0001M18.5 7H0.5" stroke="currentColor" stroke-width="2"></path>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-fls-popup="popup-offer" aria-hidden="true" class="popup popup--big">
+			<div data-fls-popup-wrapper="" class="popup__wrapper">
+				<div data-fls-popup-body="" class="popup__body">
+					<button data-fls-popup-close="" type="button" class="popup__close">
+						<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+						</svg>
+					</button>
+					<div data-fls-popup-content="" class="popup__inner">
+						<div class="popup__head">
+							<div class="popup__title title title--h2">Эксклюзивное предложение!</div>
+							<div class="popup__text">
+								Только сейчас вы можете приобрести одежду, обувь и аксессуары от люксовых брендов со скидкой до
+						-30%. Поторопитесь — количество товаров ограничено, акция действует до конца недели.
+							</div>
+							<a href="/" class="popup__btn button-dark">
+								<span>Перейти к акциям</span>
+								<svg width="21" height="14" viewbox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path opacity="0.5" d="M13.5001 1L19.5001 7.00006L13.5001 13.0001M18.5 7H0.5" stroke="currentColor" stroke-width="2"></path>
+								</svg>
+							</a>
+						</div>
+						<div class="popup__preview">
+							<video src="./assets/video/1.mp4" muted playsinline="" loop></video>
+							<div class="popup__preview-logo">
+								<img src="./assets/img/logo-2.svg" alt="Image" loading="lazy">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="popup-cookies is-open" data-fls-lp="">
+			<button type="button" class="popup-cookies__close">
+				<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+				</svg>
+			</button>
+			<div class="popup-cookies__content">
+				<div class="popup-cookies__title title title--h4">Мы используем cookies</div>
+				<div class="popup-cookies__text">
+					Balleria.kz применяет файлы cookies для удобства пользования сайтом, аналитики и подбора
+			персональных предложений. Продолжая пользоваться сайтом, вы соглашаетесь с нашей политикой
+			использования cookies.
+				</div>
+				<button type="button" class="popup-cookies__accept button-dark">Согласиться</button>
+			</div>
+		</div>
+	</body>
+</html>

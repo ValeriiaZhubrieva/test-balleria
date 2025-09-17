@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preload" href="./assets/fonts/NotoSerifKR-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/NotoSerifKR-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/NotoSerifKR-Black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/InterTight-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/InterTight-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/InterTight-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
+		<title>Placing an order</title>
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1758105476357"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1758105476357">
+		<link rel="stylesheet" crossorigin="" href="./css/product-page.min.css?v=1758105476357">
+		<link rel="stylesheet" crossorigin="" href="./css/order.min.css?v=1758105476357">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header-small">
+				<div class="header-small__container">
+					<a href="/" class="header-small__back">
+						<svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M-7.15493e-08 6L6.27123 12L7.34551 10.8771L3.05975 6.77693L12 6.77693L12 5.22307L3.05975 5.22307L7.34551 1.12291L6.27123 -6.83149e-08L-7.15493e-08 6Z" fill="currentColor"></path>
+						</svg>
+					</a>
+					<a href="/" class="header-small__logo">
+						<img src="./assets/img/logo-text.svg" alt="logo" loading="lazys">
+					</a>
+					<a href="tel:" class="header-small__phone">
+						<span class="header-small__phone-icon">
+							<svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M6.12411 0.604236C6.24688 0.727387 6.35396 0.865232 6.44304 1.01479L7.83525 3.3969C8.16981 3.96877 8.26833 4.65249 8.11045 5.30674C7.95256 5.96099 7.55034 6.53575 6.98693 6.91221L6.49566 7.24087C7.45555 9.04821 8.93181 10.5222 10.742 11.4806L11.0811 10.9829C11.4612 10.4245 12.0378 10.0274 12.6922 9.8734C13.3465 9.7194 14.0291 9.82012 14.5995 10.1549L16.9901 11.5596C17.3605 11.7788 17.6518 12.1078 17.8248 12.5023C17.9978 12.8967 18.0441 13.3377 17.9575 13.7655C17.7962 14.4709 17.4923 15.1393 17.0646 15.7291C16.6369 16.3189 16.0945 16.8176 15.471 17.1943C14.8963 17.564 14.2547 17.8139 13.5856 17.9285C12.9166 18.043 12.2345 18.0198 11.5815 17.8602C8.82347 17.125 6.32033 15.6849 4.31546 13.6799C2.31058 11.6749 0.872209 9.17332 0.140199 6.41836C-0.0202531 5.76208 -0.0432584 5.07663 0.0726071 4.40442C0.188473 3.73221 0.440742 3.08756 0.813805 2.51036C1.18701 1.89355 1.68123 1.35674 2.26585 0.933156C2.85048 0.509572 3.51307 0.20823 4.21262 0.0477813C4.55632 -0.0262175 4.911 -0.0141016 5.24468 0.0830385C5.57837 0.180178 5.88059 0.35929 6.12411 0.604236ZM7.23205 10.7412C6.24132 9.75295 5.43835 8.59278 4.86045 7.31459C4.7881 7.1544 4.77612 6.97227 4.82667 6.80106C4.87722 6.62985 4.98697 6.48084 5.13612 6.38092L6.17945 5.68365C6.4222 5.52133 6.59553 5.27366 6.66366 4.99174C6.7318 4.70981 6.68955 4.41515 6.54563 4.16856L5.15619 1.78921C5.0931 1.67755 4.99585 1.58945 4.87829 1.53746C4.76072 1.48547 4.62882 1.47224 4.50136 1.49963C4.00051 1.61625 3.52657 1.83398 3.10901 2.13927C2.69146 2.44457 2.33923 2.83089 2.07425 3.27421C1.81067 3.67582 1.6309 4.12505 1.54597 4.59426C1.46105 5.06347 1.47278 5.54274 1.58044 6.00259C2.24663 8.51171 3.5562 10.7902 5.3818 12.6164C7.2074 14.4426 9.48689 15.7545 11.9986 16.4243C12.4547 16.5308 12.93 16.5423 13.3954 16.4583C13.8607 16.3743 14.3062 16.1965 14.7045 15.9358C15.1503 15.6669 15.5392 15.3119 15.8475 14.8922C16.1559 14.4726 16.3775 13.997 16.4989 13.4941C16.5241 13.3668 16.5095 13.2358 16.4571 13.1191C16.4047 13.0023 16.317 12.9054 16.2061 12.8417L13.8162 11.4391C13.5704 11.2948 13.2762 11.2514 12.9942 11.3178C12.7123 11.3842 12.4639 11.5555 12.3002 11.7963L11.592 12.8437C11.4913 12.9918 11.3419 13.1004 11.1706 13.1499C10.9993 13.1995 10.8174 13.1868 10.6576 13.114C9.38124 12.5316 8.22197 11.7286 7.23205 10.7412Z" fill="currentColor"></path>
+							</svg>
+						</span>
+						<span class="header-small__phone-text">+77770466387</span>
+					</a>
+				</div>
+			</header>
+			<main class="page">
+				<section class="order">
+					<div class="order__container">
+						<div class="order__body">
+							<div class="order__content">
+								<h1 class="order__title title title--h2">Оформление заказа</h1>
+								<div class="order__products">
+									<div class="cart-product">
+										<a href="#" class="cart-product__img">
+											<img alt="Image" loading="lazy" src="./assets/img/products/image-1.webp">
+										</a>
+										<div class="cart-product__body">
+											<button type="button" class="cart-product__delete">
+												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+											</button>
+											<div class="cart-product__head">
+												<a href="#" class="cart-product__title">'Moschino Teddy Bear' sweatshirt</a>
+												<div class="cart-product__prices">
+													<div class="cart-product__oldprice">480$</div>
+													<div class="cart-product__price">380$</div>
+												</div>
+											</div>
+											<div class="cart-product__details">
+												<div class="cart-product__block">
+													<div class="cart-product__label">Цвет:</div>
+													<div class="cart-product__color" style="background-color: #1C1C1C;"></div>
+												</div>
+												<div class="cart-product__block">
+													<div class="cart-product__label">Размер:</div>
+													<div class="cart-product__size">S</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cart-product">
+										<a href="#" class="cart-product__img">
+											<img alt="Image" loading="lazy" src="./assets/img/products/image-2.webp">
+										</a>
+										<div class="cart-product__body">
+											<button type="button" class="cart-product__delete">
+												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+											</button>
+											<div class="cart-product__head">
+												<a href="#" class="cart-product__title">'Fendi FFold' slides</a>
+												<div class="cart-product__prices">
+													<div class="cart-product__price">380$</div>
+												</div>
+											</div>
+											<div class="cart-product__details">
+												<div class="cart-product__block">
+													<div class="cart-product__label">Цвет:</div>
+													<div class="cart-product__color" style="background-color: #FEECCF;"></div>
+												</div>
+												<div class="cart-product__block">
+													<div class="cart-product__label">Размер:</div>
+													<div class="cart-product__size">38</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cart-product">
+										<a href="#" class="cart-product__img">
+											<img alt="Image" loading="lazy" src="./assets/img/products/image-3.webp">
+										</a>
+										<div class="cart-product__body">
+											<button type="button" class="cart-product__delete">
+												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+											</button>
+											<div class="cart-product__head">
+												<a href="#" class="cart-product__title">'Maiolica' print cotton shorts</a>
+												<div class="cart-product__prices">
+													<div class="cart-product__price">380$</div>
+												</div>
+											</div>
+											<div class="cart-product__details">
+												<div class="cart-product__block">
+													<div class="cart-product__label">Цвет:</div>
+													<div class="cart-product__color" style="background-color: #134EC4;"></div>
+												</div>
+												<div class="cart-product__block">
+													<div class="cart-product__label">Размер:</div>
+													<div class="cart-product__size">38</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cart-product">
+										<a href="#" class="cart-product__img">
+											<img alt="Image" loading="lazy" src="./assets/img/products/image-4.webp">
+										</a>
+										<div class="cart-product__body">
+											<button type="button" class="cart-product__delete">
+												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+											</button>
+											<div class="cart-product__head">
+												<a href="#" class="cart-product__title">'Baguette' pouch</a>
+												<div class="cart-product__prices">
+													<div class="cart-product__price">380$</div>
+												</div>
+											</div>
+											<div class="cart-product__details">
+												<div class="cart-product__block">
+													<div class="cart-product__label">Цвет:</div>
+													<div class="cart-product__color" style="background-color: #FEECCF;"></div>
+												</div>
+												<div class="cart-product__block">
+													<div class="cart-product__label">Размер:</div>
+													<div class="cart-product__size">38</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<form action="#" class="order__form">
+									<div class="order__form-item">
+										<div class="order__form-title title title--h3">Данные получателя</div>
+										<div class="order__form-inputs">
+											<div class="input-field">
+												<label class="input-field__label">Ваше имя*</label>
+												<input autocomplete="off" type="text" name="name" class="input-field__input">
+											</div>
+											<div class="input-field">
+												<label class="input-field__label">Фамилия*</label>
+												<input autocomplete="off" type="text" name="lastname" class="input-field__input">
+											</div>
+											<div class="input-field">
+												<label class="input-field__label">Электронная почта*</label>
+												<input autocomplete="off" type="text" name="email" class="input-field__input">
+											</div>
+											<div class="input-field">
+												<label class="input-field__label">Телефон*</label>
+												<input autocomplete="off" type="text" name="tel" class="input-field__input is-error">
+												<div class="input-field__error">Ошибка, проверьте данные!</div>
+											</div>
+										</div>
+									</div>
+									<div class="order__form-item">
+										<div class="order__form-title title title--h3">Способ доставки</div>
+										<div data-fls-radio="" class="options">
+											<label class="options__item">
+												<input class="options__input" checked type="radio" value="1" name="option">
+												<span class="options__radio"></span>
+												<span class="options__text">Отделение “КазПочта” — По тарифам “КазПочта”</span>
+											</label>
+											<label class="options__item">
+												<input class="options__input" type="radio" value="2" name="option">
+												<span class="options__radio"></span>
+												<span class="options__text">Адресная доставка “КазПочта” — По тарифам “КазПочта”</span>
+											</label>
+										</div>
+									</div>
+									<div class="order__form-item">
+										<div class="order__form-title title title--h3">Адрес доставки</div>
+										<div class="order__form-inputs">
+											<div class="input-field">
+												<label class="input-field__label">Город*</label>
+												<input autocomplete="off" type="text" name="city" class="input-field__input">
+											</div>
+											<div class="input-field">
+												<label class="input-field__label">Номер отделения*</label>
+												<input autocomplete="off" type="text" name="branch" class="input-field__input">
+											</div>
+										</div>
+									</div>
+									<div class="order__form-item">
+										<div class="order__form-title title title--h3">Комментарий</div>
+										<div class="order__form-inputs">
+											<div class="input-field">
+												<label class="input-field__label">Комментарий</label>
+												<textarea name="comment" class="input-field__input"></textarea>
+											</div>
+											<div class="input-field">
+												<label class="input-field__label">Промокод</label>
+												<input autocomplete="off" type="text" name="promocode" class="input-field__input">
+											</div>
+										</div>
+									</div>
+									<button type="submit" class="order__form-buy button-dark">Оформить заказ</button>
+								</form>
+							</div>
+							<div class="order__total">
+								<div class="order__total-body">
+									<div class="order__total-title title title--h4">Итог заказа</div>
+									<div class="order__total-info">
+										<div class="order__total-label title">Товар(ов) 2 шт.:</div>
+										<div class="order__total-value">760$</div>
+									</div>
+									<div class="order__total-info">
+										<div class="order__total-label title">Дотавка:</div>
+										<div class="order__total-value">По тарифам “КазПочта”</div>
+									</div>
+									<div class="order__total-info">
+										<div class="order__total-label title">Оплата при получении:</div>
+										<div class="order__total-value">760$</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer-small">
+				<div class="footer-small__container">© Все права защищены “Balleria” 2025</div>
+			</footer>
+		</div>
+	</body>
+</html>

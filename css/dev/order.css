@@ -1,0 +1,217 @@
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.options__item {
+  position: relative;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  line-height: 130%;
+}
+.options__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.options__input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+}
+.options__input:focus-visible + .options__text {
+  outline: 1px solid #000;
+}
+.options__input:checked ~ .options__radio {
+  border-color: var(--black-100);
+}
+.options__input:checked ~ .options__radio:before {
+  transform: scale(1);
+}
+.options__radio {
+  margin-top: 5px;
+  align-self: flex-start;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  border-radius: 50%;
+  border: 1px solid var(--gray);
+  display: grid;
+  place-content: center;
+  transition: border 0.3s;
+}
+.options__radio:before {
+  content: "";
+  transform: scale(0);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--black-100);
+  transition: transform 0.3s ease 0s;
+}
+.options__text {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+}.order__body {
+  display: flex;
+}
+.order__content {
+  max-width: 54.3%;
+  width: 100%;
+  border-right: 1px solid var(--gray);
+  padding: 34px 86px 200px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.order__products {
+  overflow: hidden auto;
+  max-height: 475px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 10px;
+}
+.order__products::-webkit-scrollbar {
+  width: 4px;
+  display: block;
+}
+.order__products::-webkit-scrollbar-track {
+  background: var(--light);
+  border: none;
+}
+.order__products::-webkit-scrollbar-thumb {
+  background-color: var(--gray);
+  border: none;
+  cursor: grab;
+}
+.order__products::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+.order__products:not(:last-child) {
+  margin-bottom: 24px;
+}
+.order__form {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.order__form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.order__form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.order__form-buy {
+  margin-left: auto;
+}
+.order__total {
+  max-width: 45.7%;
+  width: 100%;
+  padding: 161px 0 200px 87px;
+}
+.order__total-body {
+  position: sticky;
+  top: 110px;
+  display: flex;
+  flex-direction: column;
+}
+.order__total-body > *:not(:last-child) {
+  margin-bottom: 24px;
+}
+.order__total-title:not(:last-child) {
+  margin-bottom: 36px;
+}
+.order__total-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.order__total-label {
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+.order__total-value {
+  font-size: 16px;
+  line-height: 130%;
+}
+@media (max-width: 89.99875em) {
+  .order__content {
+    padding-right: 20px;
+  }
+  .order__total {
+    padding-left: 20px;
+  }
+}
+@media (max-width: 61.99875em) {
+  .order__body {
+    flex-direction: column;
+    padding: 16px 0 56px 0;
+  }
+  .order__body > *:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  .order__content {
+    display: contents;
+    max-width: 100%;
+    padding: 0;
+    border-right: none;
+    gap: 0;
+  }
+  .order__title:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .order__products {
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--gray);
+  }
+  .order__form {
+    display: contents;
+  }
+  .order__form-item:not(:last-child) {
+    margin-bottom: 48px;
+  }
+  .order__form-buy {
+    order: 1;
+  }
+  .order__total {
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 48px;
+  }
+  .order__total-body > *:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .order__total-title:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 29.99875em) {
+  .order__products {
+    max-height: 260px;
+    padding-right: 5px;
+  }
+  .order__form-buy {
+    max-width: 100%;
+    min-height: 62px;
+    font-size: 18px;
+  }
+  .order__total-label {
+    font-size: 18px;
+  }
+}
+@media (max-width: 22.49875em) {
+  .order__products {
+    max-height: 300px;
+  }
+}
