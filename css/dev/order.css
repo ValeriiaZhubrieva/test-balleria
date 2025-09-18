@@ -3,6 +3,13 @@
   flex-direction: column;
   align-items: flex-start;
 }
+.options > *:not(:last-child) {
+  margin-bottom: 24px;
+}
+.options .input-field {
+  align-self: stretch;
+  width: 100%;
+}
 .options__item {
   position: relative;
   cursor: pointer;
@@ -21,8 +28,8 @@
   opacity: 0;
   position: absolute;
 }
-.options__input:focus-visible + .options__text {
-  outline: 1px solid #000;
+.options__input:focus-visible ~ .options__radio {
+  outline: auto;
 }
 .options__input:checked ~ .options__radio {
   border-color: var(--black-100);
@@ -197,6 +204,9 @@
   }
 }
 @media (max-width: 29.99875em) {
+  .options__item {
+    font-size: 16px;
+  }
   .order__products {
     max-height: 260px;
     padding-right: 5px;

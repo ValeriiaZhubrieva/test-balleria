@@ -436,7 +436,11 @@
   height: 24px;
   display: grid;
   place-content: center;
+  outline: none;
   transition: color 0.3s;
+}
+.popup__close:focus-visible {
+  color: var(--black-40);
 }
 .popup__content > *:not(:last-child) {
   margin-bottom: 34px;

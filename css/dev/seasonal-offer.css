@@ -46,6 +46,9 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
+.hero__slide-content {
+  margin-top: auto;
+}
 .hero__slide-content > *:not(:last-child) {
   margin-bottom: 28px;
 }

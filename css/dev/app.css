@@ -1,63 +1,66 @@
 * {
-	padding: 0px;
-	margin: 0px;
-	border: 0px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
 }
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 *::before,
 *::after {
-	display: inline-block;
+    display: inline-block;
 }
 html,
 body {
-	height: 100%;
+    height: 100%;
+}
+html {
+    scroll-behavior: smooth;
 }
 body {
-	line-height: 1;
-	scrollbar-gutter: stable;
-	-ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    line-height: 1;
+    scrollbar-gutter: stable;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 input,
 button,
 textarea {
-	font-family: inherit;
-	font-size: inherit;
-	line-height: inherit;
-	color: inherit;
-	background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    background-color: transparent;
 }
 input,
 textarea {
-	width: 100%;
+    width: 100%;
 }
 label {
-	display: inline-block;
+    display: inline-block;
 }
 button,
 select,
 option {
-	cursor: pointer;
+    cursor: pointer;
 }
 a {
-	display: inline-block;
-	color: inherit;
-	text-decoration: none;
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
 }
 ul li {
-	list-style: none;
+    list-style: none;
 }
 img {
-	max-width: 100%;
-	height: auto;
-	vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
 }
 h1,
 h2,
@@ -65,8 +68,8 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: inherit;
-	font-size: inherit;
+    font-weight: inherit;
+    font-size: inherit;
 }
 * {
     -webkit-tap-highlight-color: transparent;
@@ -397,6 +400,19 @@ body::after {
 }
 .product-card__img img {
   transition: transform 0.5s;
+}
+.product-card__img-text {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: var(--light-4);
 }
 .product-card__brand {
   max-width: fit-content;
@@ -761,6 +777,33 @@ body::after {
   font-size: 16px;
   letter-spacing: 0.02em;
   color: var(--black-40);
+}input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.input {
+  border-radius: 0 !important;
+  width: 100%;
+  display: block;
+  padding: 10px;
+  border: 1px solid #eee;
+  caret-color: inherit;
+}
+.input[placeholder]:not([data-fls-placeholder-nohiden])::placeholder {
+  transition: opacity 0.3s;
+}
+.input[placeholder]:not([data-fls-placeholder-nohiden]):focus::placeholder {
+  opacity: 0;
+}
+
+textarea.input {
+  resize: vertical;
+  padding: 0px 0px;
 }.header {
   position: sticky;
   top: 0;
@@ -1375,6 +1418,9 @@ body::after {
     touch-action: none;
     overscroll-behavior: none;
   }
+  .product-card--big .product-card__img-text {
+    font-size: 60px;
+  }
   .category-card__title {
     font-size: 20px;
     gap: 7px;
@@ -1756,6 +1802,9 @@ body::after {
     flex-direction: column;
     gap: 8px;
   }
+  .product-card__title {
+    font-size: 16px;
+  }
   .product-card__prices {
     max-width: fit-content;
     align-items: flex-end;
@@ -1796,6 +1845,12 @@ body::after {
   }
   .footer__copy {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 23.12375em) {
+  .product-card--big .product-card__img-text {
+    font-size: 48px;
   }
 }
 
@@ -1925,6 +1980,12 @@ body::after {
   }
 }
 
+@media (min-width: 61.99875em) and (max-width: 112.5em) {
+  .product-card--big .product-card__img-text {
+    font-size: clamp( 60px , -17.3430608153px  +  7.796836712vw , 123px );
+  }
+}
+
 @media (min-width: 112.5em) {
   .title--h1 {
     font-size: 120px;
@@ -1937,6 +1998,9 @@ body::after {
   }
   .title--h4 {
     font-size: 36px;
+  }
+  .product-card--big .product-card__img-text {
+    font-size: 123px;
   }
   .header__top-right {
     column-gap: 64px;
